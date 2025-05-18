@@ -13,13 +13,13 @@
 <ul><li>Parity bits generated using matrix operations and cyclic shifts.</li></ul>
 
 <h1>Modulation and Channel Model</h1>
-Modulation: BPSK (Binary Phase Shift Keying).
-Channel: AWGN (Additive White Gaussian Noise).
+<ul><li>Modulation: BPSK (Binary Phase Shift Keying).</li><li>Channel: AWGN (Additive White Gaussian Noise).</li></ul>
+
 
 <h1>Decoding Algorithms</h1>
 <ul>
 <li>Soft-decision decoding using the Min-Sum Algorithm.</li>
-<ul>Performance compared with:
+<ul><h2>Performance compared with:</h2>
 <li>Hard-decision decoding (bit-flipping algorithm).</li>
 <li>Normal approximation bound.</li>
 <li>Shannon limit for theoretical reference.</li>
