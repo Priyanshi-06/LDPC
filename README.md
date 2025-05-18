@@ -2,11 +2,13 @@
 # LDPC Coding and Decoding for 5G NR (Base Graph 2)
 <p>This repository contains a MATLAB implementation of LDPC (Low-Density Parity-Check) coding and decoding for 5G New Radio (NR) based on Base Graph 2 (BG2), as specified in the 3GPP TS 38.212 standard.</p>
 
-#Features
-LDPC Matrix Construction
-Implements LDPC parity-check matrix based on 5G NR Base Graph 2.
-Uses a fixed lifting size of z = 52.
-Expansion via circular permutation matrices derived from base graph indices.
+<h1>Features</h1>
+<ul>
+<li>LDPC Matrix Construction</li>
+<li>Implements LDPC parity-check matrix based on 5G NR Base Graph 2.</li>
+<li>Uses a fixed lifting size of z = 52.</li>
+<li>Expansion via circular permutation matrices derived from base graph indices.</li>
+</ul>
 
 #Encoding
 Parity bits generated using matrix operations and cyclic shifts.
