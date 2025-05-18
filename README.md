@@ -1,5 +1,5 @@
 # LDPC Coding and Decoding for 5G NR (Base Graph 2)
-<p>This repository contains a MATLAB implementation of LDPC (Low-Density Parity-Check) coding and decoding for 5G New Radio (NR) based on Base Graph 2 (BG2), as specified in the 3GPP TS 38.212 standard.</p>
+<p>This repository contains a MATLAB implementation of LDPC (Low-Density Parity-Check) coding and decoding for 5G New Radio (NR) based on Base Graph 2 (BG2).</p>
 
 <h1>Features</h1>
 <ul>
@@ -13,8 +13,8 @@
 <ul><li>Parity bits generated using matrix operations and cyclic shifts.</li></ul>
 
 <h1>Modulation and Channel Model</h1>
-<h2>Modulation:</h2> BPSK (Binary Phase Shift Keying).
-<h2>Channel</h2>: AWGN (Additive White Gaussian Noise).
+Modulation: BPSK (Binary Phase Shift Keying).
+Channel: AWGN (Additive White Gaussian Noise).
 
 <h1>Decoding Algorithms</h1>
 <ul>
