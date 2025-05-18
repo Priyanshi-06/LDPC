@@ -1,0 +1,31 @@
+r = 1/4;
+K = 128;
+N = K / r;  
+
+EbNodB = 0:0.1:6; 
+EbNo_linear = 10.^(EbNodB / 10);
+
+Pe_NA = zeros(size(EbNodB));
+
+for i = 1:length(EbNodB)
+    P = r * EbNo_linear(i); 
+    C = log2(1 + P);
+    V = (log2(exp(1)))^2 * (P * (P + 2)) / (2 * (P + 1)^2);
+    term = sqrt(N/V) * (C - r + log2(N) / (2 * N));
+    Pe_NA(i) = qfunc(term);
+end
+
+shannon_limit_dB = 10 * log10((2^r - 1)/r);
+
+figure;
+semilogy(EbNodB_14, ber_14, 'ks-','LineWidth',2, 'MarkerFaceColor','w');hold on;
+semilogy(EbNodB, Pe_NA, 'b-', 'LineWidth', 2); 
+xline(shannon_limit_dB, 'r--', 'LineWidth', 2, ...
+    'Label', sprintf('Shannon Limit (%.2f dB)', shannon_limit_dB), ...
+    'LabelVerticalAlignment', 'bottom');
+
+grid on;
+xlabel('Eb/N0 (dB)');
+ylabel('Block Error Probability');
+title('Simulated BER vs Normal Approximation vs Shannon Limit (Rate = 1/4, N = 512)');
+legend('Simulated BER','Normal Approximation', 'Shannon Limit', 'Location', 'SouthWest');
